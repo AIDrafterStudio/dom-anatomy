@@ -5,7 +5,7 @@ Thank you for your interest in contributing! This document provides guidelines f
 ## 🚀 Quick Start
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/yourusername/dom-anatomy.git`
+2. Clone your fork: `git clone https://github.com/AIDrafterStudio/dom-anatomy.git`
 3. Create a branch: `git checkout -b feature/my-feature`
 4. Make your changes
 5. Run tests: `npm test`
@@ -33,7 +33,7 @@ Edit the appropriate `i18n/[lang].json` file and add descriptions for new HTML t
 
 ### Reporting Bugs
 
-Use the [issue tracker](https://github.com/yourusername/dom-anatomy/issues) with:
+Use the [issue tracker](https://github.com/AIDrafterStudio/dom-anatomy/issues) with:
 - Clear title and description
 - Steps to reproduce
 - Expected vs actual behavior

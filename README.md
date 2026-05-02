@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/dom-anatomy.svg)](https://www.npmjs.com/package/dom-anatomy)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/dom-anatomy?style=social)](https://github.com/yourusername/dom-anatomy)
+[![GitHub Stars](https://img.shields.io/github/stars/AIDrafterStudio/dom-anatomy?style=social)](https://github.com/AIDrafterStudio/dom-anatomy)
 
 **DOM Anatomy** is a visual X-Ray tool that helps you understand any webpage's structure by adding an interactive overlay that identifies every HTML element with color-coded outlines, floating tooltips, and an educational inspector panel.
 
@@ -195,7 +195,7 @@ We love contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ### Feature Requests
 
-Have an idea? [Open an issue](https://github.com/yourusername/dom-anatomy/issues) or [start a discussion](https://github.com/yourusername/dom-anatomy/discussions).
+Have an idea? [Open an issue](https://github.com/AIDrafterStudio/dom-anatomy/issues) or [start a discussion](https://github.com/AIDrafterStudio/dom-anatomy/discussions).
 
 ---
 
@@ -216,7 +216,7 @@ Have an idea? [Open an issue](https://github.com/yourusername/dom-anatomy/issues
 
 ## 📄 License
 
-MIT © [Your Name](https://github.com/yourusername)
+MIT © [Your Name](https://github.com/AIDrafterStudio)
 
 ---
 
