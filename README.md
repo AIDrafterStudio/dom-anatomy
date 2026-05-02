@@ -56,8 +56,7 @@ Perfect for:
 
 1. **Drag this link to your bookmarks bar**:
    
-   [🔍 DOM Anatomy](#bookmarklet)
-
+   [▶️ Try the Live Demo](https://aidrafterstudio.github.io/dom-anatomy/bookmarklet/demo.html)
 2. Visit any webpage
 3. Click the bookmark
 4. Hover over any element to see its anatomy
@@ -216,8 +215,7 @@ Have an idea? [Open an issue](https://github.com/AIDrafterStudio/dom-anatomy/iss
 
 ## 📄 License
 
-MIT © [Your Name](https://github.com/AIDrafterStudio)
-
+MIT © [AIDrafterStudio](https://github.com/AIDrafterStudio)
 ---
 
 ## 🙏 Acknowledgments
