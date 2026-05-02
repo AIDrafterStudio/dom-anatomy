@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Anatomy",
+  "version": "1.0.0",
+  "description": "Transform any webpage into an interactive HTML learning laboratory.",
+  "action": {
+    "default_title": "Activate X-Ray Mode"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
