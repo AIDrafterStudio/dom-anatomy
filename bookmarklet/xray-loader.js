@@ -278,9 +278,8 @@
 `;
   document.head.appendChild(style);
 
-  const script = document.createElement('script');
-  script.id = 'dom-anatomy-xray-script';
-  script.textContent = `(function() {
+  // Execute main logic
+  (function() {
     'use strict';
 
     const i18n = {
@@ -333,31 +332,31 @@
 ;
 
     const tagCss = {
-        'main': 'main {\\n  display: block;\\n}',
-        'header': 'header {\\n  display: block;\\n}',
-        'section': 'section {\\n  display: block;\\n}',
-        'aside': 'aside {\\n  display: block;\\n}',
-        'footer': 'footer {\\n  display: block;\\n}',
-        'div': 'div {\\n  display: block;\\n}',
-        'h1': 'h1 {\\n  display: block;\\n  font-size: 2em;\\n  font-weight: bold;\\n}',
-        'h2': 'h2 {\\n  display: block;\\n  font-size: 1.5em;\\n  font-weight: bold;\\n}',
-        'h3': 'h3 {\\n  display: block;\\n  font-size: 1.17em;\\n  font-weight: bold;\\n}',
-        'p': 'p {\\n  display: block;\\n  margin: 1em 0;\\n}',
-        'span': 'span {\\n  display: inline;\\n}',
-        'ul': 'ul {\\n  display: block;\\n  list-style-type: disc;\\n  padding-left: 2rem;\\n}',
-        'li': 'li {\\n  display: list-item;\\n}',
-        'script': 'script {\\n  display: none;\\n}',
-        'link': 'link {\\n  display: none;\\n}',
-        'meta': 'meta {\\n  display: none;\\n}',
-        'title': 'title {\\n  display: none;\\n}',
-        'i': 'i {\\n  display: inline;\\n  font-style: italic;\\n}',
-        'a': 'a {\\n  display: inline;\\n  color: blue;\\n  text-decoration: underline;\\n}',
-        'img': 'img {\\n  display: inline-block;\\n}',
-        'nav': 'nav {\\n  display: block;\\n}',
-        'article': 'article {\\n  display: block;\\n}',
-        'form': 'form {\\n  display: block;\\n}',
-        'input': 'input {\\n  display: inline-block;\\n}',
-        'button': 'button {\\n  display: inline-block;\\n}'
+        'main': 'main {\n  display: block;\n}',
+        'header': 'header {\n  display: block;\n}',
+        'section': 'section {\n  display: block;\n}',
+        'aside': 'aside {\n  display: block;\n}',
+        'footer': 'footer {\n  display: block;\n}',
+        'div': 'div {\n  display: block;\n}',
+        'h1': 'h1 {\n  display: block;\n  font-size: 2em;\n  font-weight: bold;\n}',
+        'h2': 'h2 {\n  display: block;\n  font-size: 1.5em;\n  font-weight: bold;\n}',
+        'h3': 'h3 {\n  display: block;\n  font-size: 1.17em;\n  font-weight: bold;\n}',
+        'p': 'p {\n  display: block;\n  margin: 1em 0;\n}',
+        'span': 'span {\n  display: inline;\n}',
+        'ul': 'ul {\n  display: block;\n  list-style-type: disc;\n  padding-left: 2rem;\n}',
+        'li': 'li {\n  display: list-item;\n}',
+        'script': 'script {\n  display: none;\n}',
+        'link': 'link {\n  display: none;\n}',
+        'meta': 'meta {\n  display: none;\n}',
+        'title': 'title {\n  display: none;\n}',
+        'i': 'i {\n  display: inline;\n  font-style: italic;\n}',
+        'a': 'a {\n  display: inline;\n  color: blue;\n  text-decoration: underline;\n}',
+        'img': 'img {\n  display: inline-block;\n}',
+        'nav': 'nav {\n  display: block;\n}',
+        'article': 'article {\n  display: block;\n}',
+        'form': 'form {\n  display: block;\n}',
+        'input': 'input {\n  display: inline-block;\n}',
+        'button': 'button {\n  display: inline-block;\n}'
     };
 
     function getTagColor(tag) {
@@ -400,7 +399,7 @@
     // Create panel
     const panel = document.createElement('div');
     panel.className = 'xray-panel';
-    panel.innerHTML = \`
+    panel.innerHTML = `
         <h3>${i18n.ui.panel_title}</h3>
         <div class="xray-visual-id" id="xray-visual-id">
             <div class="xray-visual-tag">&lt;tag&gt;</div>
@@ -413,13 +412,13 @@
         <div class="xray-desc" id="xray-desc"></div>
         <div class="xray-css" id="xray-css">/* css */</div>
         <div class="xray-hint">${i18n.ui.hint}</div>
-    \`;
+    `;
     document.body.appendChild(panel);
 
     // Create legend
     const legend = document.createElement('div');
     legend.className = 'xray-legend';
-    legend.innerHTML = \`
+    legend.innerHTML = `
         <div class="xray-legend-item"><div class="xray-legend-color" style="background:#3b82f6"></div><span>${i18n.ui.legend_main} (&lt;main&gt;)</span></div>
         <div class="xray-legend-item"><div class="xray-legend-color" style="background:#8b5cf6"></div><span>${i18n.ui.legend_sections} (&lt;header&gt;, &lt;section&gt;)</span></div>
         <div class="xray-legend-item"><div class="xray-legend-color" style="background:#06b6d4"></div><span>${i18n.ui.legend_aside} (&lt;aside&gt;, &lt;footer&gt;)</span></div>
@@ -428,7 +427,7 @@
         <div class="xray-legend-item"><div class="xray-legend-color" style="background:#a78bfa"></div><span>${i18n.ui.legend_lists} (&lt;ul&gt;, &lt;li&gt;)</span></div>
         <div class="xray-legend-item"><div class="xray-legend-color" style="background:#f59e0b"></div><span>${i18n.ui.legend_meta}</span></div>
         <div class="xray-legend-item"><div class="xray-legend-color" style="background:#ec4899"></div><span>${i18n.ui.legend_icons} (&lt;i&gt;)</span></div>
-    \`;
+    `;
     document.body.appendChild(legend);
 
     const termEl = document.getElementById('xray-term');
@@ -482,7 +481,7 @@
         let css = (tagCss[tag] || ('/* ' + tag + ' { ... } */'));
         if (cleanCls) {
             const classes = cleanCls.split(' ');
-            css += '\\n\\n/* Classes */\\n.' + classes.join(',\\n.') + ' { ... }';
+            css += '\n\n/* Classes */\n.' + classes.join(',\n.') + ' { ... }';
         }
         el.setAttribute('data-term', term);
         el.setAttribute('data-desc', desc);
@@ -529,7 +528,7 @@
         for (let i = 0; i < attrs.length; i++) {
             const attr = attrs[i];
             if (attr.name.startsWith('data-') || attr.name === 'class') continue;
-            attrsText += attr.name + '=\\"' + attr.value + '\\"  ';
+            attrsText += attr.name + '=\"' + attr.value + '\"  ';
         }
         visualAttrsEl.textContent = attrsText || i18n.ui.no_attrs;
         panel.style.borderColor = '#22c55e';
@@ -568,6 +567,5 @@
 
     console.log('%c 🔍 DOM ANATOMY ACTIVATED ', 'background: #f59e0b; color: #000; font-weight: bold; padding: 6px 10px; border-radius: 4px;');
 })();
-`;
-  document.body.appendChild(script);
+
 })();

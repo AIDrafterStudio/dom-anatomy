@@ -15,9 +15,7 @@ const i18n = fs.readFileSync(i18nPath, 'utf8');
 // Replace i18n placeholder
 js = js.replace('/* I18N_DATA */', `const i18n = ${i18n};`);
 
-// Escape backticks and backslashes for the template literal
-const escapedCss = css.replace(/\\/g, '\\\\').replace(/`/g, '\\`');
-const escapedJs = js.replace(/\\/g, '\\\\').replace(/`/g, '\\`');
+const escapedCss = css.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\\$/g, '\\\\$');
 
 const loaderCode = `
 (function() {
@@ -33,10 +31,8 @@ const loaderCode = `
   style.textContent = \`${escapedCss}\`;
   document.head.appendChild(style);
 
-  const script = document.createElement('script');
-  script.id = 'dom-anatomy-xray-script';
-  script.textContent = \`${escapedJs}\`;
-  document.body.appendChild(script);
+  // Execute main logic
+  ${js}
 })();
 `;
 
