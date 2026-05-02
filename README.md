@@ -61,8 +61,16 @@ Perfect for:
 3. Click the bookmark
 4. Hover over any element to see its anatomy
 
-> **Note**: Some sites with strict CSP (Content Security Policy) like GitHub may block the bookmarklet. Use the CLI or browser extension (coming soon) for those.
+> **Note**: Some sites with strict CSP (Content Security Policy) like GitHub may block the bookmarklet. For those sites, use the **Browser Extension** below.
 
+### 🧩 Browser Extension (Bypasses all restrictions)
+
+If a website blocks the bookmarklet, you can load DOM Anatomy as a native Chrome/Edge extension:
+1. Clone or download this repository.
+2. Open `chrome://extensions/` (or `edge://extensions/`).
+3. Enable **Developer mode**.
+4. Click **Load unpacked** and select the `extension/` folder inside this project.
+5. Click the extension icon on any webpage to activate X-Ray mode!
 ### CLI Tool
 
 ```bash
@@ -205,7 +213,7 @@ Have an idea? [Open an issue](https://github.com/AIDrafterStudio/dom-anatomy/iss
 - [x] Multi-language support
 - [x] Bulk analysis
 - [x] Auto-generated manuals
-- [ ] Browser extension (Chrome/Firefox)
+- [x] Browser extension (Chrome/Edge)
 - [ ] VS Code extension
 - [ ] Interactive DOM tree visualization
 - [ ] CSS specificity analyzer
