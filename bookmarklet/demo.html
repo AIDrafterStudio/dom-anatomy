@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Anatomy - Bookmarklet</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background: #0f172a;
+            color: #f8fafc;
+        }
+        h1 { color: #f59e0b; }
+        .bookmarklet {
+            display: inline-block;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem 0;
+            cursor: move;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+        .demo-area {
+            border: 2px dashed #475569;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.03);
+        }
+        .demo-area h2 { color: #22d3ee; }
+        .instructions {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        code {
+            background: rgba(255,255,255,0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 DOM Anatomy Bookmarklet</h1>
+    
+    <div class="instructions">
+        <h3>How to use:</h3>
+        <ol>
+            <li><strong>Drag</strong> the button below to your bookmarks bar</li>
+            <li>Visit <strong>any webpage</strong></li>
+            <li>Click the bookmark to activate X-Ray mode</li>
+            <li>Hover over elements to see their anatomy</li>
+        </ol>
+    </div>
+
+    <a href="javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/yourusername/dom-anatomy@main/bookmarklet/xray-loader.js';document.body.appendChild(s);})();" class="bookmarklet">
+        🔍 DOM Anatomy
+    </a>
+
+    <div class="demo-area">
+        <h2>Demo Area</h2>
+        <p>This is a paragraph inside a demo container.</p>
+        <div>
+            <span>A nested span</span>
+        </div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+
+    <p><strong>Note:</strong> The bookmarklet uses a CDN loader. For local testing, check the <code>cli/</code> directory.</p>
+</body>
+</html>

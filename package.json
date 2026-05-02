@@ -1,0 +1,50 @@
+{
+  "name": "dom-anatomy",
+  "version": "1.0.0",
+  "description": "Transform any HTML into an interactive learning laboratory. Visual X-Ray mode for DOM elements with educational descriptions, color-coded outlines, and automatic documentation generation.",
+  "main": "cli/src/index.js",
+  "bin": {
+    "dom-anatomy": "./cli/bin/dom-anatomy"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint cli/src/**/*.js",
+    "format": "prettier --write cli/src/**/*.js"
+  },
+  "keywords": [
+    "html",
+    "dom",
+    "visualizer",
+    "inspector",
+    "educational",
+    "xray",
+    "learning",
+    "frontend",
+    "css",
+    "bookmarklet"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/dom-anatomy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/dom-anatomy/issues"
+  },
+  "homepage": "https://github.com/yourusername/dom-anatomy#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "glob": "^10.3.10",
+    "yargs": "^17.7.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
