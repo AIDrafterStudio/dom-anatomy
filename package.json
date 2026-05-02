@@ -10,7 +10,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint cli/src/**/*.js",
-    "format": "prettier --write cli/src/**/*.js"
+    "format": "prettier --write cli/src/**/*.js",
+    "build:bookmarklet": "node scripts/build-bookmarklet.js"
   },
   "keywords": [
     "html",
